@@ -78,6 +78,23 @@ function writeToFile(fileName, data) {
 // function to initialize program
 function init() {
 
+  inquirer
+  .prompt(questions)
+  .then((userResponses) => {
+    console.log("Your responses: ", userResponses);
+    console.log("Thank you! Fetching your GitHub data...");
+
+     // Write markdown to file
+     const markdown = generateMarkdown(userResponses);
+
+     return writeFileAsync("README.md", markdown);
+   })
+   .then(() => {
+     console.log("README.md has been created!");
+   })
+   .catch((error) => {
+     console.log(error);
+   });
 }
 
 // function call to initialize program
