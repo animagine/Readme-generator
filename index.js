@@ -62,6 +62,16 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+  function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+      if (err) {
+        return console.log(err);
+      }
+      console.log("Awesome! Your README.md file has been created");
+    });
+  }
+  const writeFileAsync = util.promisify(writeToFile);
+  
 }
 
 // function to initialize program
