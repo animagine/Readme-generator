@@ -26,6 +26,6 @@
   undefined
 
   ### Questions
-  [Github Profile](https://github.com/animagine)
+  [Github Profile - Animagine ](https://github.com/animagine)
   
   animagine@live.com
